@@ -3,7 +3,7 @@ public class ContaCorrente {
     private double saldo;
     private String agencia;
     private String numero;
-    private String nome;
+    private Cliente cliente;
 
     public ContaCorrente(){
     }
@@ -28,12 +28,12 @@ public class ContaCorrente {
         this.numero = numero;
     }
 
-    public String getNome(){
-        return nome;
+    public Cliente getCliente(){
+        return cliente;
     }
 
-    public void setNome(String nome){
-        this.nome = nome;
+    public void setCliente(Cliente cliente){
+        this.cliente = cliente;
     }
 
     public void efetuarDeposito(double valor){
