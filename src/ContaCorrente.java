@@ -17,6 +17,10 @@ public class ContaCorrente {
     }
 
     public void setAgencia(String agencia){
+        if(agencia != null){
+            System.out.println("Numero inválido.");
+            return;
+        }
         this.agencia = agencia;
     }
 
@@ -25,6 +29,10 @@ public class ContaCorrente {
     }
 
     public void setNumero(String numero){
+        if(numero != null){
+            System.out.println("Numero inválido.");
+            return;
+        }
         this.numero = numero;
     }
 

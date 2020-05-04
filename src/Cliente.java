@@ -1,7 +1,10 @@
 public class Cliente {
+
     private String nome;
     private String CPF;
     private String profissao;
+
+
 
     public String getNome(){
         return nome;
