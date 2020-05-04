@@ -4,8 +4,19 @@ public class ContaCorrente {
     private String agencia;
     private String numero;
     private Cliente cliente;
+    private static int total;
 
     public ContaCorrente(){
+
+    }
+
+    public ContaCorrente(String agencia, String numero){
+        total++;
+        System.out.println("O total de contas criadas é: " + total);
+
+        this.agencia = agencia;
+        this.numero = numero;
+        System.out.println("Conta criada: " + this.numero + " Agência: " + this.agencia );
     }
 
     public double getSaldo(){
@@ -44,6 +55,10 @@ public class ContaCorrente {
         this.cliente = cliente;
     }
 
+    public static int getTotal(){
+        return ContaCorrente.total;
+    }
+
     public void efetuarDeposito(double valor){
         this.saldo += valor;
     }
@@ -57,8 +72,7 @@ public class ContaCorrente {
     }
 
     public boolean efetuarTransferencia(double valor, ContaCorrente conta){
-        if(this.saldo >= valor){
-            efetuaSaque(valor);
+        if(efetuaSaque(valor)){
             conta.efetuarDeposito(valor);
             return true;
         }
