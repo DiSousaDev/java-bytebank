@@ -1,3 +1,5 @@
+package bitebank1;
+
 public class ContaCorrente {
 
     private double saldo;
