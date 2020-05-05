@@ -14,7 +14,7 @@ public class TesteConta2 {
         conta1.setCliente(cliente1);
         conta1.efetuarDeposito(150);
 
-        System.out.println("bitebank1.Cliente: " + conta1.getCliente().getNome() + " Saldo: " + conta1.getSaldo());
+        System.out.println("Cliente: " + conta1.getCliente().getNome() + " Saldo: " + conta1.getSaldo());
 
         ContaCorrente conta2 = new ContaCorrente("1234", "654321");
 
