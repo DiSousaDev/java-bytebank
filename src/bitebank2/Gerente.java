@@ -16,7 +16,7 @@ public class Gerente extends Funcionario{
     }
 
     public double getBonificacao(){
-        return getSalario();
+        return super.getBonificacao() + super.getSalario();
     }
 
     public boolean autentica(int senha){
