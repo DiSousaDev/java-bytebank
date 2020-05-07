@@ -13,8 +13,12 @@ public class TesteGerente {
         System.out.println(gerente.getSalario());
 
         gerente.setSenha(2222);
-        boolean autentica = gerente.autentica(2222);
-        System.out.println(autentica);
+
+        if(gerente.autentica(2222)){
+            System.out.println("Autenticado com Sucesso!");
+        }else{
+            System.out.println("Senha inválida");
+        }
 
         System.out.println(gerente.getBonificacao());
 
