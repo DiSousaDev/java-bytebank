@@ -16,6 +16,10 @@ public class ContaCorrente extends Conta{
         return taxa;
     }
 
+    public void efetuarDeposito(double valor){
+        super.saldo += valor;
+    }
+
     public boolean efetuaSaque(double valor){
         double valorASacar = valor + 0.2;
         return super.efetuaSaque(valorASacar);

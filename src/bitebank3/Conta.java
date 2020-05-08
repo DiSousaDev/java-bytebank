@@ -1,8 +1,8 @@
 package bitebank3;
 
-public class Conta {
+public abstract class Conta {
 
-    private double saldo;
+    protected double saldo;
     private String agencia;
     private String numero;
     private Cliente cliente;
@@ -45,6 +45,8 @@ public class Conta {
         this.numero = numero;
     }
 
+    public abstract void efetuarDeposito(double valor);
+
     public Cliente getCliente(){
         return cliente;
     }
@@ -55,10 +57,6 @@ public class Conta {
 
     public static int getTotal(){
         return Conta.total;
-    }
-
-    public void efetuarDeposito(double valor){
-        this.saldo += valor;
     }
 
     public boolean efetuaSaque(double valor){

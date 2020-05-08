@@ -1,6 +1,6 @@
 package bitebank2;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nome;
     private String cpf;
@@ -14,6 +14,8 @@ public class Funcionario {
         this.cpf = cpf;
         this.salario = salario;
     }
+
+    public abstract double getBonificacao();
 
     public String getNome(){
         return nome;
@@ -39,7 +41,4 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public double getBonificacao(){
-        return this.salario*0.05;
-    }
 }
