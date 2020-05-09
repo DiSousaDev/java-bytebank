@@ -1,6 +1,6 @@
 package bitebank3;
 
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements Tributavel{
 
     private static double taxa = 0.1;
 
@@ -23,6 +23,11 @@ public class ContaCorrente extends Conta{
     public boolean efetuaSaque(double valor){
         double valorASacar = valor + 0.2;
         return super.efetuaSaque(valorASacar);
+    }
+
+    @Override
+    public double getValorImposto(){
+        return super.saldo * 0.01;
     }
 }
 

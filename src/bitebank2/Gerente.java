@@ -2,25 +2,23 @@ package bitebank2;
 
 public class Gerente extends Funcionario implements Autenticavel{
 
-    private int senha;
+    private AutenticacaoUtil aut;
 
     public Gerente(){
-    }
-
-    public int getSenha(){
-        return senha;
-    }
-
-    public void setSenha(int senha){
-        this.senha = senha;
+        this.aut = new AutenticacaoUtil();
     }
 
     public double getBonificacao(){
-        return super.getSalario();
+        return 50;
+    }
+
+    @Override
+    public void setSenha(int senha){
+        this.aut.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha){
-       return this.senha == senha;
+        return this.aut.autentica(senha);
     }
 }

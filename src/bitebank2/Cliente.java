@@ -2,15 +2,19 @@ package bitebank2;
 
 public class Cliente implements Autenticavel{
 
-    private int senha;
+    private AutenticacaoUtil aut;
+
+    public Cliente(){
+        this.aut = new AutenticacaoUtil();
+    }
 
     @Override
     public void setSenha(int senha){
-        this.senha = senha;
+        this.aut.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha){
-        return this.senha == senha;
+        return this.aut.autentica(senha);
     }
 }
