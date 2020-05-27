@@ -1,9 +1,10 @@
 package comparator;
 
-public class Conta {
+public class Conta implements Comparable<Conta> {
 
     private Long agencia;
     private Long numero;
+    private double saldo;
     private Cliente cliente;
 
     public Conta(Long agencia, Long numero, Cliente cliente){
@@ -36,8 +37,21 @@ public class Conta {
         this.cliente = cliente;
     }
 
+    public Double getSaldo(){
+        return saldo;
+    }
+
+    public void efetuarDeposito(double valor){
+        this.saldo += valor;
+    }
+
+    @Override
+    public int compareTo(Conta outra){ //ordernar contas por saldo.
+        return Double.compare(this.saldo, outra.saldo);
+    }
+
     @Override
     public String toString(){
-        return "Conta{" + "agencia=" + agencia + ", numero=" + numero + ", cliente=" + cliente + '}';
+        return "Conta{" + "agencia=" + agencia + ", numero=" + numero + ", cliente=" + cliente + ", saldo=" + saldo + '}';
     }
 }
