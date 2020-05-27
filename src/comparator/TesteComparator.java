@@ -35,16 +35,14 @@ public class TesteComparator {
         }
 
         System.out.println("------------------");
-        OrdenarConta ordenarConta = new OrdenarConta();
-        contas.sort(ordenarConta);
+        contas.sort(new OrdenarConta());
 
         for (Conta conta : contas) {
             System.out.println(conta);
         }
 
         System.out.println("------------------");
-        OrdenarTitular ordenarTitular = new OrdenarTitular();
-        contas.sort(ordenarTitular);
+        contas.sort(new OrdenarTitular());
 
         for (Conta conta : contas) {
             System.out.println(conta);
