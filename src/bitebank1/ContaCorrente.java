@@ -80,4 +80,9 @@ public class ContaCorrente {
         }
         return false;
     }
+
+    @Override
+    public String toString(){
+        return "ContaCorrente{" + "saldo=" + saldo + ", agencia='" + agencia + '\'' + ", numero='" + numero + '\'' + ", cliente=" + cliente + '}';
+    }
 }
